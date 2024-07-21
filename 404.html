@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>流萤日记 · ERROR</title>
+<link rel="icon" href="./favicon.ico">
+<style>
+  body  
+        {
+    background-image: url('https://api.imlazy.ink/img');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 设置高度以确保背景图片充满整个视窗 */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* 文字颜色，以适应背景图 */
+    font-family: Arial, sans-serif; /* 设置字体 */
+    position: relative; /* 设置为相对定位，以便绝对定位子元素 */
+  }
+
+  h1, h4, p {
+    background-color: rgba(0, 0, 0, 0.1); /* 给标题和段落添加半透明背景 */
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 20px; /* 留出足够空间给胶囊状元素 */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 12px;
+    color: #ffffff; /* 白色文字 */
+  }
+
+  .capsule {
+    position: fixed;
+    bottom: 80px; /* 调整位置，确保不会与版权信息重叠 */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px 20px; /* 增加左右内边距 */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    cursor: pointer;
+    opacity: 0.8; /* 降低透明度 */
+    z-index: 1; /* 确保在版权信息上方 */
+  }
+
+  .capsule:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .capsule-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 水平居中 */
+  }
+
+  .capsule-button {
+    background-color: #ffffff; /* 纯白色 */
+    color: #000000; /* 黑色字体 */
+    border: none;
+    padding: 12px 24px; /* 增加按钮内边距 */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 30px; /* 圆润的长方形胶囊状 */
+    cursor: pointer;
+    outline: none;
+  }
+
+  .capsule-button:hover {
+    background-color: #dddddd; /* 按钮悬停时颜色变浅 */
+  }
+
+  .footer a {
+    color: #ffffff; /* 白色文字 */
+    text-decoration: none; /* 去掉下划线 */
+  }
+
+  .footer a:hover {
+    text-decoration: none; /* 悬停时不显示下划线 */
+  }
+</style>
+</head>
+<body>
+  <h1>流萤日记</h1>
+  <h4>ERROR 找不到一点儿内容。你不会是喝醉酒输错 URL 了吧？！</h4>
+  <p>© 2024 Huoick Studio</p>
+
+  <!-- 右下角胶囊状元素 -->
+  <div class="capsule" id="capsule" onclick="toggleCapsule()">
+    <div class="capsule-content">
+      <button class="capsule-button" id="capsule-button">查看壁纸</button>
+    </div>
+  </div>
+
+  <!-- 版权信息 -->
+  <div class="footer">
+    <span>图片由 </span><a href="https://api.imlazy.ink/" target="_blank">雫 API</a><span> 提供</span>
+  </div>
+
+<script>
+  function toggleCapsule() {
+    var buttonText = document.getElementById('capsule-button');
+
+    if (buttonText.textContent === '查看壁纸') {
+      // 切换为退出查看状态
+      buttonText.textContent = '退出查看';
+
+      // 隐藏页面上的文字
+      document.querySelectorAll('h1, h4, p').forEach(function(element) {
+        element.style.display = 'none';
+      });
+    } else {
+      // 切换为查看壁纸状态
+      buttonText.textContent = '查看壁纸';
+
+      // 恢复显示页面上的文字
+      document.querySelectorAll('h1, h4, p').forEach(function(element) {
+        element.style.display = 'block';
+      });
+    }
+  }
+</script>
+
+</body>
+</html>

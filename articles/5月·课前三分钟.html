@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>流萤日记 5月·课前三分钟</title>
+<link rel="icon" href="./favicon.ico">
+<style>
+body {
+  font-family: 'HarmonyOS_Sans_SC_Regular', Arial, sans-serif; /* 使用 HarmonyOS_Sans_SC_Regular 字体 */
+  background-color: #f9f9f9;
+  padding-top: 50px; /* 为了给固定黑条留出空间 */
+  margin: 0;
+  color: #000; /* 设置正文文字颜色为黑色 */
+}
+
+@font-face {
+  font-family: 'HarmonyOS_Sans_SC_Regular'; /* 自定义字体名称 */
+  src: url('HarmonyOS_Sans_SC_Regular.ttf') format('truetype'); /* 引用本地字体文件 */
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333333; /* 更改黑条颜色为 #333333 */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.back-button {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  background-image: url('arrow.svg'); /* 使用 arrow.svg 图标 */
+  background-size: cover;
+  display: inline-block;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.info {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px; /* 缩小标题与信息之间的距离 */
+  word-wrap: break-word; /* 标题自动换行 */
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word; /* 正文自动换行 */
+}
+
+img {
+  border-radius: 10px; /* 设置圆角半径为 10px */
+  max-width: 100%; /* 设置最大宽度为容器宽度 */
+  height: auto; /* 高度自适应 */
+  margin-bottom: 20px; /* 图片之间增加垂直间距 */
+}
+
+.special-image {
+  border-radius: 5px; /* 设置圆角半径为 5px */
+  width: 1000px; /* 设置特定图片宽度为 1000px */
+  height: 100px; /* 高度自适应 */
+  object-fit: cover; /* 裁剪并填充容器 */
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: none;
+  transition: opacity 0.3s; /* 添加渐变效果 */
+}
+
+.back-to-top:hover {
+  background-color: #0056b3;
+}
+
+.back-to-top.show {
+  opacity: 1; /* 显示按钮 */
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <a href="https://huoiop.cn/" class="back-button"></a>
+  <span class="title">流萤日记</span>
+</div>
+<div class="container">
+   <img src="https://upload-bbs.miyoushe.com/upload/2024/02/16/344647679/8901d9393a56643ed871f70dc9f1c17c_6208440372420848529.jpg?x-oss-process=image/auto-orient,0/interlace,1/format,jpg" alt="" class="special-image">
+  <h1>4月·政治周末重点问题！</h1>
+  <div class="info">作者：Huoiop&Tang Shuo | 时间：2024年4月13日</div>
+  <!--<p>请查收本周的政治背诵作业！</p>
+  <p>Q1-P4 我国的国家性质、根本制度。<p>Q2-P4 为什么要坚持中国共产党的领导。<p>Q3-P5 宪法如何保障国家权力属于人民？<p>Q4-P9 国家/宪法如何做到尊重和保障人权？<p>Q5-P13 宪法如何设置组织国家机构？<p>Q6-P15 民主集中制的主要表现？<p>Q7-P16 为什么要规范权力运行？<p>Q8-P16如何规范权力的运行？<p>Q9-P24 宪法的地位？<p>Q10-P24 宪法和其它法律的关系？<p>Q11-P29 为什么要增强宪法意识？<p>Q12-P29 如何增强宪法意识。<p>Q13-P43 公民应如何依法行使权力？<p>Q14-P54 权力和义务的关系？<p>Q15-P55 如何正确处理权利和义务的关系？-->
+ <img src="https://cdn.huoiop.cn/pictures/powerpoint/lhx/幻灯片1.png" alt="图片描述">
+<!--  <p>继续下一段文字...</p>
+  <img src="pictures/powerpoint" alt="图片描述">
+  <p>更多文字内容...</p>
+  <img src="image3.jpg" alt="图片描述">
+  <a href="#" class="back-to-top">返回顶部</a>-->
+</div>
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  var backToTopButton = document.querySelector(".back-to-top");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTopButton.classList.add("show"); // 添加显示类
+  } else {
+    backToTopButton.classList.remove("show"); // 移除显示类
+  }
+}
+
+document.querySelector(".back-to-top").addEventListener("click", function() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});
+</script>
+</body>
+</html>
