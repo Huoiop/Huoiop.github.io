@@ -1,184 +1,204 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>流萤日记</title>
-<link rel="icon" href="./favicon.ico">
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>流萤日记</title>
+  <link rel="icon" href="./favicon.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body
-        {
-  background-color: white; /* 设置背景色为白色 */
-  margin-bottom: 80px; /* 为了避免联系方式遮挡内容，添加底部间距 */
-  
-}
+    body {
+      background-color: white;
+      /* 设置背景色为白色 */
+      margin-bottom: 80px;
+      /* 为了避免联系方式遮挡内容，添加底部间距 */
 
-a {
-  color: white; /* 设置链接颜色为白色 */
-  text-decoration: none; /* 去掉下划线 */
-}
+    }
 
-.header {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
+    a {
+      color: white;
+      /* 设置链接颜色为白色 */
+      text-decoration: none;
+      /* 去掉下划线 */
+    }
 
-.banner {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 300px; /* 设置横幅高度 */
-  background-image: url('mimijidi.png'); /* 设置横幅背景图片：https://upload-bbs.miyoushe.com/upload/2024/02/16/344647679/8901d9393a56643ed871f70dc9f1c17c_6208440372420848529.jpg?x-oss-process=image/auto-orient,0/interlace,1/format,jpg */
-  background-size: cover;
-  background-position: center;
-}
+    .header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 设置半透明的背景色 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .banner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 300px;
+      /* 设置横幅高度 */
+      background-image: url('mimijidi.png');
+      /* 设置横幅背景图片：https://upload-bbs.miyoushe.com/upload/2024/02/16/344647679/8901d9393a56643ed871f70dc9f1c17c_6208440372420848529.jpg?x-oss-process=image/auto-orient,0/interlace,1/format,jpg */
+      background-size: cover;
+      background-position: center;
+    }
 
-.title {
-  color: white;
-  font-size: 48px;
-  text-align: center;
-  padding: 20px;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      /* 设置半透明的背景色 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.section {
-  display: flex;
-  align-items: center;
-  padding: 40px 0;
-  text-align: center;
-  background-color: white; /* 设置section背景色为白色 */
-}
+    .title {
+      color: white;
+      font-size: 48px;
+      text-align: center;
+      padding: 20px;
+    }
 
-.section-content {
-  flex: 1;
-  text-align: left;
-  padding: 0 20px;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-.section img {
-  max-width: 40%; /* 设置图片最大宽度为50%，可根据需要调整 */
-  height: auto; /* 高度自适应 */
-  border-radius: 37px; /* 添加圆角效果，值为圆角半径 */
-}
+    .section {
+      display: flex;
+      align-items: center;
+      padding: 40px 0;
+      text-align: center;
+      background-color: white;
+      /* 设置section背景色为白色 */
+    }
 
-.section h2 {
-  margin-bottom: 20px;
-}
+    .section-content {
+      flex: 1;
+      text-align: left;
+      padding: 0 20px;
+    }
 
-.button {
-  background-color: #007bff; /* 设置按钮背景色为蓝色 */
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px; /* 设置按钮两端圆形 */
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none; /* 移除按钮文字下的下划线 */
-  margin-top: 10px; /* 增加按钮和文字之间的垂直间距 */
-}
+    .section img {
+      max-width: 40%;
+      /* 设置图片最大宽度为50%，可根据需要调整 */
+      height: auto;
+      /* 高度自适应 */
+      border-radius: 37px;
+      /* 添加圆角效果，值为圆角半径 */
+    }
 
-.button-icon {
-  margin-right: 10px;
-}
+    .section h2 {
+      margin-bottom: 20px;
+    }
 
-.footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #f0f0f0;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 12px;
-            color: #666;
-        }.footer a {
-            text-decoration: none;
-            color: inherit;
-        }
+    .button {
+      background-color: #007bff;
+      /* 设置按钮背景色为蓝色 */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      /* 设置按钮两端圆形 */
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      /* 移除按钮文字下的下划线 */
+      margin-top: 10px;
+      /* 增加按钮和文字之间的垂直间距 */
+    }
 
-</style>
+    .button-icon {
+      margin-right: 10px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #f0f0f0;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
 </head>
+
 <body>
-<div class="banner">
-  <div class="overlay">
-    <h1 class="title">流萤日记</h1>
+  <div class="banner">
+    <div class="overlay">
+      <h1 class="title">流萤日记</h1>
+    </div>
   </div>
-</div>
 
 
-  
-<!--<div class="container">
-  <section class="section">
-    <div class="section-content">
-      <h2>生物实验视频</h2>
-      <p>用作纪念。</p>
-      <a href="articles/生物实验视频.html" class="button"></span>查看详情</a>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="section-content">
-      <h2>5月·语文课前三分钟</h2>
-      <a href="articles/5月·课前三分钟.html" class="button"></span>查看详情</a>
-    </div>
-  </section>-->
+  <div class="container">
+    <section class="section">
+      <div class="section-content">
+        <h2>生物实验视频</h2>
+        <p>用作纪念。</p>
+        <a href="articles/生物实验视频.html" class="button"></span>查看详情</a>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="section-content">
-      <h2>董某某&吴某某·课前三分钟</h2>
-      <p>课前三分钟 · 「太平临新岁」by Huoick Studio & miHoYo</p>
-      </span>🎉🎉已于2024年3月11日完成</a>
-    </div>
-    <img src="images/dyx&wjy.jpg" alt="Image 0">
-  </section>
+    <section class="section">
+      <div class="section-content">
+        <h2>5月·语文课前三分钟</h2>
+        <a href="articles/5月·课前三分钟.html" class="button"></span>查看详情</a>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="section-content">
-      <h2>谢某某&赵某某·课前三分钟</h2>
-      <p>课前三分钟 · 「滴答！一起来梦游吧！」by Huoick Studio & miHoYo</p>
-      </span>🎉🎉已于2024年3月28日完成</a>
-    </div>
-    <img src="images/xzh.jpg" alt="Image 1">
-  </section>
+    <section class="section">
+      <div class="section-content">
+        <h2>董某某&吴某某·课前三分钟</h2>
+        <p>课前三分钟 · 「太平临新岁」by Huoick Studio & miHoYo</p>
+        </span>🎉🎉已于2024年3月11日完成</a>
+      </div>
+      <img src="images/dyx&wjy.jpg" alt="Image 0">
+    </section>
 
-  <section class="section">
-    <div class="section-content">
-      <h2>邱&张&曹·课前三分钟</h2>
-      <p>课前三分钟 · 「虚谭•浮世三千一刀缭断」by Huoick Studio & miHoYo</p>
-      </span>🎉🎉已于2024年5月25日完成</a>
-    </div>
-    <img src="images/wkr.jpg" alt="Image 2">
-  </section>
-</div>
+    <section class="section">
+      <div class="section-content">
+        <h2>谢某某&赵某某·课前三分钟</h2>
+        <p>课前三分钟 · 「滴答！一起来梦游吧！」by Huoick Studio & miHoYo</p>
+        </span>🎉🎉已于2024年3月28日完成</a>
+      </div>
+      <img src="images/xzh.jpg" alt="Image 1">
+    </section>
 
-<footer class="footer">
+    <section class="section">
+      <div class="section-content">
+        <h2>邱&张&曹·课前三分钟</h2>
+        <p>课前三分钟 · 「虚谭•浮世三千一刀缭断」by Huoick Studio & miHoYo</p>
+        </span>🎉🎉已于2024年5月25日完成</a>
+      </div>
+      <img src="images/wkr.jpg" alt="Image 2">
+    </section>
+  </div>
+
+  <footer class="footer">
     <div class="footer-content">
-    <span>© 2024 Huoick STUDIO | </span>
-    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023021855号-1</a><span> | 此站为 Github 镜像站。</span>
-</div>
-</footer>
+      <span>© 2024 Huoick STUDIO | </span>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">蜀ICP备2023021855号-1</a><span> | 此站点为
+        Github 镜像站点</span><a href="https://huoiop.cn/" target="_self" rel="noopener noreferrer"> | 点击前往主站点（如果可用）</a>
+    </div>
+  </footer>
 </body>
+
 </html>
